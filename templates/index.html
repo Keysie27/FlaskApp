@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Fullname</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    {% for contacto in contactos %}
+    <tr>
+        <th scope="row">{{contacto.0}}</th>
+        <td>{{contacto.1}}</td>
+        <td>{{contacto.2}}</td>
+        <td>{{contacto.3}}</td>
+        <td>
+          <a href="get/{{ contacto.0 }}">Edit</a>
+          <a href="delete/{{ contacto.0 }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

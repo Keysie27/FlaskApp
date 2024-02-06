@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<form action="/edit/{{contactos.0}}" method="POST">
+    <div class="mb-3">
+        <label for="" class="form-label">Fullname</label>
+        <input type="text" value="{{contactos.1}}" name="fullname" class="form-control" id="" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Phone number</label>
+        <input type="text" value="{{contactos.2}}" name="phone" class="form-control" id="" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" value="{{contactos.3}}" name="email" class="form-control" id="">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
